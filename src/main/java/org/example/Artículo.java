@@ -32,6 +32,7 @@ public class Artículo {
     public boolean venderProducto(int cantidadAVender) {
         boolean ventaExitosa = false;
         if (this.disponible && this.stock > cantidadAVender && cantidadAVender > 0) {
+        if (this.stock >= cantidadAVender && cantidadAVender > 0) {
             this.stock = this.stock - cantidadAVender;
             if (this.stock == 0) {
                 this.disponible = false;
